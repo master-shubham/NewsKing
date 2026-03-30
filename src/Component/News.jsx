@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import NewsItem from "./NewsItem";
-import Spinner from "./Spinner";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Searchbar from "./Searchbar";
 import Dropdown from "./Dropdown";
 import NewsHeading from "./NewsHeading";
+import SkeletonCard from "./SkeletonCard";
 
 const News = (props) => {
   const [articles, setArticles] = useState([]);
@@ -120,11 +120,24 @@ const fetchMoreData = async () => {
       </div>
 
       {/* Infinite Scroll */}
+      {loading && articles.length === 0 ? (
+  <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {Array.from({ length: 6 }).map((_, i) => (
+      <SkeletonCard key={i} />
+    ))}
+  </div>
+) : (
       <InfiniteScroll
         dataLength={articles?.length || 0}
         next={fetchMoreData}
         hasMore={articles.length !== totalResults}
-        loader={<Spinner />}
+        loader={
+          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <SkeletonCard key={i} />
+            ))}
+          </div>
+        }
       >
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((element, index) => (
@@ -141,6 +154,7 @@ const fetchMoreData = async () => {
           ))}
         </div>
       </InfiniteScroll>
+)}
     </div>
   );
 };
