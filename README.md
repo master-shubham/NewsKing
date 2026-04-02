@@ -28,9 +28,11 @@ A modern and responsive **News Application** built with **React + Vite**, featur
 ---
 
 ## 📸 Preview
-
+**Home**
 > ![Home Page](/Images/Home.png)
+**News**
 > ![News Page](/Images/TopNews.png)
+**About**
 > ![About Page](/Images/About.png)
 
 ---
