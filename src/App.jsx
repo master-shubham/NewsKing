@@ -1,10 +1,13 @@
 import "./App.css";
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import Navbar from "./Component/Navbar";
-import News from "./Component/News";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./page/About";
 import Home from "./page/Home";
+import SkeletonCard from "./Component/SkeletonCard";
+
+// Lazy load News
+const News = lazy(() => import("./Component/News"));
 
 const App = () => {
   const pageSize = 6;
@@ -19,33 +22,32 @@ const App = () => {
     "technology",
   ];
 
-  
-
   return (
     <Router>
       <Navbar />
 
-      <Routes>
-        {/* Home Route */}
-        <Route
-          path="/"
-          element={
-           <Home/>
-          }
-        />
-        <Route path="/about" element={<About />} />
+      {/* Suspense wrapper */}
+      <Suspense fallback={<SkeletonCard/>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
 
-        {/* Dynamic Routes */}
-        {categories.map((cat) => (
-          <Route
-            key={cat}
-            path={`/${cat}`}
-            element={
-              <News key={cat} pageSize={pageSize} country="us" catagory={cat} />
-            }
-          />
-        ))}
-      </Routes>
+          {categories.map((cat) => (
+            <Route
+              key={cat}
+              path={`/${cat}`}
+              element={
+                <News
+                  key={cat}
+                  pageSize={pageSize}
+                  country="us"
+                  catagory={cat}
+                />
+              }
+            />
+          ))}
+        </Routes>
+      </Suspense>
     </Router>
   );
 };

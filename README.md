@@ -1,16 +1,123 @@
-# React + Vite
+# 👑 NewsKing - Modern News App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **News Application** built with **React + Vite**, featuring real-time news, category filtering, search, and infinite scrolling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* 📰 Live News Fetching (API Integration)
+* 🔍 Search with Debounce (optimized API calls)
+* 📂 Category Filtering (Business, Sports, Technology, etc.)
+* ♾️ Infinite Scroll (smooth UX)
+* ⚡ Fast Performance (Vite)
+* 🎨 Modern UI with Tailwind CSS
+* 🧠 AbortController (prevents race conditions)
+* ⏳ Skeleton Loading (better UX)
+* 🌙 Clean & Responsive Design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React, Vite
+* **Styling:** Tailwind CSS
+* **API:** GNews / News API
+* **State Management:** React Hooks
+
+---
+
+## 📸 Preview
+
+> Add your screenshots here
+> (UI looks clean with category tabs, search, and news cards)
+
+---
+
+## ⚙️ Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/newsKing.git
+
+# Navigate to project
+cd newsKing
+
+# Install dependencies
+npm install
+
+# Run the app
+npm run dev
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in root:
+
+```env
+VITE_APIKEY=your_api_key_here
+```
+
+---
+
+## 🌐 API Used
+
+* GNews API (recommended)
+* NewsAPI (limited requests)
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├── components/
+ │   ├── News.jsx
+ │   ├── NewsItem.jsx
+ │   ├── Navbar.jsx
+ │   ├── Searchbar.jsx
+ │   ├── Dropdown.jsx
+ │   ├── SkeletonCard.jsx
+ │
+ ├── App.jsx
+ └── main.jsx
+```
+
+---
+
+## 🚀 Future Improvements
+
+* ❤️ Bookmark / Save News
+* 🌙 Dark Mode
+* 🔥 Trending Section
+* 🧠 Backend Caching (avoid API limits)
+* 📊 News Analytics
+
+---
+
+## 🐞 Known Issues
+
+* Free API has request limits (429 error)
+* Some images may be null from API
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repo and improve it!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 💡 Author
+
+Made with ❤️ by **Shubham (coder 👨‍💻)**
+
+---
