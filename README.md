@@ -6,15 +6,15 @@ A modern and responsive **News Application** built with **React + Vite**, featur
 
 ## 🚀 Features
 
-* 📰 Live News Fetching (API Integration)
-* 🔍 Search with Debounce (optimized API calls)
-* 📂 Category Filtering (Business, Sports, Technology, etc.)
-* ♾️ Infinite Scroll (smooth UX)
-* ⚡ Fast Performance (Vite)
-* 🎨 Modern UI with Tailwind CSS
-* 🧠 AbortController (prevents race conditions)
-* ⏳ Skeleton Loading (better UX)
-* 🌙 Clean & Responsive Design
+* 📰 Live News Fetching – Real-time data powered by News API
+* 🔍 Smart Search with Debounce – Reduces unnecessary API calls for better performance
+* 📂 Category-Based Filtering – Browse news by Business, Sports, Technology, and more
+* ♾️ Infinite Scrolling – Seamless content loading for smooth user experience
+* ⚡ Optimized Performance – Built with Vite + Lazy Loading for faster load times
+* 🎨 Modern UI – Styled with Tailwind CSS for a clean and elegant look
+* 🧠 AbortController Handling – Prevents race conditions and stale data issues
+* ⏳ Skeleton Loaders – Improves perceived performance while fetching data
+* 🌙 Responsive Design – Works smoothly across mobile, tablet, and desktop
 
 ---
 
@@ -29,8 +29,9 @@ A modern and responsive **News Application** built with **React + Vite**, featur
 
 ## 📸 Preview
 
-> Add your screenshots here
-> (UI looks clean with category tabs, search, and news cards)
+> ![Home Page](/Images/Home.png)
+> ![News Page](/Images/TopNews.png)
+> ![About Page](/Images/About.png)
 
 ---
 
